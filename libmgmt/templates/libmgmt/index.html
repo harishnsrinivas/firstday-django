@@ -1,0 +1,11 @@
+<strong>LIBRARY</strong><br /><br />
+{% for rtype, books in books_by_rack_type.items %}
+	<strong>{{rtype}}</strong>
+	<ul>
+		{% for book in books %}
+			<li>
+				<a href="/libr/book/{{book.id}}/">{{book.title}}</a>
+			</li>	
+		{% endfor %}
+	</ul>
+{% endfor %}

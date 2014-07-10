@@ -1,0 +1,17 @@
+<strong>Poll question : {{question}}</strong>
+<table>
+<thead>
+	<td>option</td>
+	<td>votes</td>
+</thead>
+{% for choice in vote_standings %}
+	<tr>
+		<td>
+			{{choice.choice_text}}
+		</td>
+		<td>
+			{{choice.votes}}
+		</td>
+	</tr>
+{% endfor %}
+</table>

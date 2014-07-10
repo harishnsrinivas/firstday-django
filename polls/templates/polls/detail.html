@@ -1,0 +1,8 @@
+<strong>Showing available voting options.</strong>
+<ul>
+{% for choice in poll_choices %}
+	<li>
+		<a href="/polls/{{poll_id}}/vote/{{choice.id}}" rel="tooltip" title="click the link to vote"> {{choice.choice_text}} </a>
+	</li>
+{% endfor %}
+</ul>

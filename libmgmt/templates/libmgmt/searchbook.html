@@ -1,0 +1,8 @@
+<form action="/libr/searchbook/" method="POST">
+{% csrf_token %}
+<input type="text" name="title" placeholder="Name of the book?"/> <br />
+<input type="text" name="author" placeholder="One of the authors?"/><br />
+<input type="text" name="publisher" placeholder="publisher?"/><br />
+<input type="text" name="type" placeholder="Type of the book?"/><br />
+<input type="submit" value="Go">
+</form>

@@ -1,0 +1,23 @@
+{% if book %}
+<div>Title : <strong>{{book.title}}</strong> </div><br />
+<div>Type : <strong>{{book.book_type}}</strong> </div><br />
+<div>Authors : <br />
+	<ul>
+		{% for author in book.authors.all %}
+			<li>{{author.name}}</li>
+		{% endfor %}
+	</ul>
+</div><br />
+<div>
+Publisher :
+	<ul>
+		<li> Name : {{book.publisher.name}} </li>
+		<li> Address : {{book.publisher.address}} </li>
+		<li> Email : {{book.publisher.email}} </li>
+	</ul>
+</div>
+<br /> 
+<div>
+Availability : {% if book.is_available %}Available {% else %} Not Available {%endif%}
+</div>
+{% endif %}
